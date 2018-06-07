@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灵铱科技有限公司</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/xuci/assets/css/bootstrap.min.css">
+    <link rel="icon" href="./logo_ico.ico" type="img/x-ico"/>
+    <script src="/xuci/assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <img class="logo" src="/xuci/assets/img/logo.png" alt="">
+    <div class="title">灵铱路由器</div>
+    <input type="text" id="username" class="form-control" placeholder="账号">
+    <input type="password" id="password" class="form-control" placeholder="密码">
+    <div style="text-align: right">
+        <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+    </div>
+</div>
+</body>
+<style>
+    .wrapper {
+        width: 280px;
+        margin: 0 auto;
+        text-align: center;
+        color: #666;
+        padding-top: 7%;
+    }
+
+    .logo {
+        margin-top: 100px;
+        width: 100px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 26px;
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin-top: 12px;
+        background-color: #00a0e9;
+        border-color: #00a0e9;
+    }
+
+    .wrapper input {
+        margin: 15px 0;
+    }
+</style>
+<script>
+    function login() {
+        uname = $('#username').val();
+        psd = $('#password').val();
+        if (!uname || !psd) {
+            alert('请输入账号密码');
+            return;
+        }
+        $.post("/cgi-bin/login.lua", {getcfg: 1, username: uname, password: psd}, function (response, status, xhr) {
+            if (response.code === "ok") {
+                location.href = "home.html"
+            } else {
+                alert('账户或密码输入错误');
+            }
+            console.log(response);
+        }, "json");
+    }
+
+    $(document).keyup(function (event) {
+        if (event.keyCode == 13) {
+            login();
+        }
+    });
+</script>
+</html>

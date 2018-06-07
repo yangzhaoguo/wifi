@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="ie6 oldie" lang="zh"><![endif]-->
+<!--[if IE 7]>
+<html class="ie7 oldie" lang="zh"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 oldie" lang="zh"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh"> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="edge"/>
+    <link rel="icon" href="./logo_ico.ico" type="img/x-ico"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <!--[if lt IE 7]>
+    <meta http-equiv="refresh" content="0; url=http://miwifi.com/cgi-bin/luci/web/ieblock"/>
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style>
+        body {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+    <title>灵铱科技有限公司</title>
+    <meta name="viewport" content="width=1200">
+    <link href="/xuci/assets/css/bc.css-v=0.0.3.css" rel="stylesheet">
+    <link href="/xuci/assets/css/qos.css-v=0.0.3.css" rel="stylesheet">
+    <link href="/xuci/assets/css/index.css-v=0.0.3.css" rel="stylesheet">
+</head>
+<script>
+    var debug = true;
+    
+    if(!debug){
+        window.console.log = function () {}
+    }
+</script>
+<body>
+<div id="doc">
+    <noscript>
+        <div class="noscript">你的浏览器禁止了Javascript功能，会造成无法使用系统进行路由器管理，请开启。</div>
+    </noscript>
+    <script>
+        var GLOBALHEADER = true;
+    </script>
+    <div id="hd">
+        <div class="inner">
+            <div class="mod-head clearfix">
+                <h1 id="logo">
+                    <a href="home.html">
+                        <img src="/xuci/assets/img/logo.png" alt="灵铱路由器">
+                    </a>
+                </h1>
+                <div id="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="home.html">路由状态</a>
+                        </li>
+
+                        <li>
+                            <a href="setting/wifi.html">常用设置</a>
+                        </li>
+                        <li>
+                            <a href="prosetting/qos.html">高级设置</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div id="userbar" style="display: none">
+                    <span id="sysmenu" class="name s-dropdown">LingYi-WiFi</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mod-netmap">
+        <div class="inner clearfix">
+            <div class="devices nav-tab">
+                <div class="img"></div>
+                <p>终端设备</p>
+                <div class="status status-devices" id="statusDevices"><b id="statusDevices_length"
+                                                                         class="devcountonline">--</b>台
+                </div>
+            </div>
+            <div id="devline" class="line line-ok"></div>
+            <div class="router nav-tab active">
+                <div class="img">
+                    <img class="on" src="/xuci/assets/img/icons/router_r3g_101_on.png">
+                    <img class="off" src="/xuci/assets/img/icons/router_r3g_101.png">
+                </div>
+                <p>LingYi (家)</p>
+                <table class="status-wifi" id="statusWifi">
+
+                    <tr>
+                        <td class="l">
+                            <div class="status"><i id="ssid24status" class="ico ico-wifi-on"></i><span>2.4G: </span><b
+                                    id="ssid24val">开启</b></div>
+                        </td>
+                        <td class="c">|</td>
+                        <td class="r">
+                            <div class="status"><i id="ssid50status" class="ico ico-wifi-on"></i><span>5G:</span><b
+                                    id="ssid50val">开启</b></div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div id="netline" class="line line-err"></div>
+            <div class="internet nav-tab">
+                <div class="img"></div>
+                <p>互联网</p>
+                <div class="status status-internet" id="statusInternet">未连接</div>
+            </div>
+        </div>
+    </div>
+    <div id="bd">
+        <div class="mod-devicestatus nav-tab-content" style="display:none;">
+            <div id="devicesTables">
+                <table class="mod-table-devices">
+                    <thead>
+                    <tr>
+                        <th class="s0">网线连网设备</th>
+                        <!--<th class="s1">访问外网</th>-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img class="dev-icon" width="60" src="/xuci/assets/img/device_list_unknow.png"
+                                 onerror="this.src='/img/device_list_error.png'">
+                            <div class="dev-info">
+                                <div class="name">user-PC &nbsp;&nbsp;<span class="muted">|&nbsp;本机</span></div>
+                                <ul class="devnetinfo clearfix">
+                                    <li><span class="k">已连接:</span> <span class="v">19分3秒</span></li>
+                                    <li>
+
+                                        <p><span class="k">IP地址:</span> <span class="v">192.168.0.0</span></p>
+
+                                    </li>
+                                    <li><span class="k">MAC地址:</span> <span class="v">00:E0:70:2B:69:CE</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <!--<td class="option">-->
+                        <!--<a data-self="1" data-mac="00:E0:70:2B:69:CE" data-type="wan" href="#"-->
+                        <!--class="btn-switch btn-switch-on act-kick-out"></a>-->
+                        <!--</td>-->
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script id="devicesTables_template" type="text/template">
+            <table class="mod-table-devices">
+                <thead>
+                <tr>
+                    <th class="s0">网线连网设备</th>
+                    <!--<th class="s1">访问外网</th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <%for(i=0; i < deviceArr.length; i++){var item = deviceArr[i]%>
+                <tr>
+                    <td>
+                        <img class="dev-icon" width="60" src="/xuci/assets/img/device_list_unknow.png"
+                             onerror="this.src='/img/device_list_error.png'">
+                        <div class="dev-info">
+                            <div class="name">
+                                <%=(item[0])%>
+                                <!--&nbsp;&nbsp;<span class="muted">|&nbsp;本机</span>-->
+                            </div>
+                            <ul class="devnetinfo clearfix">
+                                <li><span class="k">已连接</span> <span class="v"></span></li>
+                                <li>
+
+                                    <p><span class="k">IP地址:</span> <span class="v"><%=(item[1])%></span></p>
+
+                                </li>
+                                <li><span class="k">MAC地址:</span> <span class="v"><%=(item[2])%></span></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <!--<td class="option">-->
+                    <!--<a data-self="1" data-mac="00:E0:70:2B:69:CE" data-type="wan" href="#"-->
+                    <!--class="btn-switch btn-switch-on act-kick-out"></a>-->
+                    <!--</td>-->
+                </tr>
+                <%}%>
+
+                </tbody>
+            </table>
+        </script>
+        <div class="mod-routerstatus nav-tab-content clearfix">
+            <div class="routerinfo" id="routerinfo">
+                <div class="hd">
+                    <h3>路由器信息</h3>
+                </div>
+                <div class="bd">
+                    <table>
+                        <tr>
+                            <td id="routermodel">--</td>
+                            <td id="routerversion">--</td>
+                            <td id="routermac">--</td>
+                            <td id="routersn">--</td>
+                        </tr>
+                        <tr>
+                            <th>路由器型号</th>
+                            <th>系统ROM版本</th>
+                            <th>MAC地址</th>
+                            <th>SN</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="hr"></div>
+        </div>
+        <script type="text/template" id="routerinfo_template">
+            <div class="hd">
+                <h3>路由器信息</h3>
+            </div>
+            <div class="bd">
+                <table>
+                    <tr>
+                        <td><%=(data.model)%></td>
+                        <td><%=(data.kv)%></td>
+                        <td><%=(data.mac)%></td>
+                        <td><%=(data.sn)%></td>
+                    </tr>
+                    <tr>
+                        <th>路由器型号</th>
+                        <th>系统版本</th>
+                        <th>MAC地址</th>
+                        <th>SN</th>
+                    </tr>
+                </table>
+            </div>
+        </script>
+
+        <div class="mod-internetstatus nav-tab-content" style="display:none;">
+            <div class="internet-panel first">
+                <div class="hd">
+                    <h3>外网状态</h3>
+                </div>
+                <div class="bd">
+                    <table id="wanStatusContent"></table>
+                </div>
+            </div>
+
+            <div class="internet-panel">
+                <div class="hd">
+                    <h3>外网带宽</h3>
+                </div>
+                <div class="bd">
+                    <table>
+                        <tr class="first">
+                            <td>
+                                <dl>
+                                    <dt>下载带宽</dt>
+                                    <dd><span id="banddownload">--</span>Mbps</dd>
+                                </dl>
+                            </td>
+                            <td>
+                                <dl>
+                                    <dt>上传带宽</dt>
+                                    <dd><span id="bandupload">--</span>Mbps</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <!--<tr>-->
+                            <!--<td colspan="2">-->
+                                <!--<a id="btnSpeedTest" href="#" class="btn btn-primary btn-m"><span-->
+                                        <!--id="retestSpeed">重新测速</span></a>-->
+                                <!--<a id="btnBandset" href="#" class="btn btn-dft btn-m"><span-->
+                                        <!--id="manualSetting">手工设置</span></a>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ft">
+        <p class="rom-ver">系统版本: 0.0.0 开发版  MAC地址: 00:00:00:00:00:00</p>
+        <p>&copy; 2018 灵铱路由器</p>
+    </div>
+    <script type="text/template" id="ft_template">
+        <p class="rom-ver">系统版本: <%=(data.fv)%> 开发版  MAC地址: <%=(data.mac)%></p>
+        <p>&copy; 2018 灵铱路由器</p>
+    </script>
+</div>
+
+<!--[if lt IE 7]>
+
+<script>
+    try {
+        document.execCommand("BackgroundImageCache", false, true);
+    } catch (e) {
+    }
+</script>
+<![endif]-->
+<div class="mask-menu" id="maskMenu"
+     style="position:fixed;left:0;top:0; width:100%; height:100%; z-index:2; display:none;">
+</div>
+<div id="dropmenu" class="dropmenu" style="z-index:3; display:none;">
+    <ul>
+        <li><a href="#" id="toRename">修改路由器名称</a></li>
+
+        <li><a href="">系统升级</a></li>
+
+        <li><a href="#" id="toReboot">重启</a></li>
+
+        <li class="last"><a href="">注销</a></li>
+    </ul>
+</diV>
+<script>
+    var i18n = {};
+    i18n.dialog = {
+        ok: '确认',
+        cancel: '取消',
+        loading: '加载中...',
+        dlgtitle: '消息框'
+    };
+    i18n.valid = {
+        n_integer: '请输入一个{$0}位正整数。',
+        n_format: '数字输入格式为&#34;{$0}&#34;。',
+        n_upper: '输入值太大，最大允许{$0}。', //注意：{$0}表示允许值，{$1}表示实际值
+        n_lower: '输入值太小，最小允许{$0}。',
+        nrange_from: '您输入的范围不合理。',
+        nrange_to: '您输入的范围不合理。',
+        n_useless_zero: '数字前面好像有多余的&#34;0&#34;。',
+        d_format: '日期输入格式为&#34;YYYY-MM-DD&#34;。',
+        d_upper: '日期太晚，最晚允许{$0}。',
+        d_lower: '日期太早，最早允许{$0}。',
+        daterange_from: '起始日期不能大于截止日期。',
+        daterange_to: '截止日期不能小于起始日期。',
+        daterange_larger_span: "时间跨度不得超过{$0}天。",
+        text_longer: '最多允许{$0}个字。', //'{$1}字太多，最多允许{$0}字'
+        text_shorter: '请至少输入{$0}个字。', //'{$1}字太少，最少允许{$0}字'
+        bytetext_longer: '最多允许{$0}个字节。', //'{$1}字节太多，最多允许{$0}字节'
+        bytetext_shorter: '请至少输入{$0}个字节。', //'{$1}字节太少，最少允许{$0}字节'
+        richtext_longer: '最多允许{$0}个字。',
+        richtext_shorter: '请至少输入{$0}个字。',
+        _reconfirm: '两次输入不一致。',
+        _time: '请检查您输入的时间格式。',
+        _minute: '请检查您输入的时间格式。',
+        _email: '请检查您输入的Email格式。',
+        _mobilecode: '请检查您输入的手机号码。',
+        _phone: '请检查您输入的电话号码。',
+        _phonewithext: '请检查您输入的电话号码。',
+        _phonezone: '请检查您输入的电话区号。',
+        _phonecode: '请检查您输入的电话号码。',
+        _phoneext: '请检查您输入的电话分机号码。',
+        _zipcode: '请检查您输入的邮政编码。',
+        _idnumber: '请检查您输入的身份证号码，目前只支持15位或者18位。',
+        _bankcard: '请检查您输入的银行账号。',
+        _cnname: '请检查您输入的姓名。',
+        _vcode: '请检查您输入的验证码。',
+        _imgfile: '请检查您选择的图片文件路径，只支持jpg、jpeg、png、gif、tif、bmp格式。',
+        _regexp: '请检查您的输入。',
+        _magic: '请检查您的输入。',
+        _req_text: '请填写{$0}。',
+        _req_select: '请选择{$0}。',
+        _req_file: '请上传{$0}。',
+        _logicrequired: '{$0}输入不完整.',
+        _ssid: '请输入标准字符，如 Xiaomi.Luyouqi',
+        _macaddr: 'MAC地址格式有误，如ab:cd:ef:11:22:33',
+        _weppassword: '密码输入有误',
+        _wifipassword: '不能包含中文',
+        _ipaddr: 'IP地址由4个 0~255 之间的数字组成，数字之间用点区隔',
+        _url: '必须是完整的URL,如 http://miwifi.com'
+    };
+</script>
+
+
+<script src="/xuci/assets/js/jquery-1.8.3.js"></script>
+<script src="/xuci/assets/js/qwrap.js"></script>
+<script src="/xuci/assets/js/common.js"></script>
+<script src="/xuci/assets/js/raphael.js"></script>
+<script src="/xuci/assets/js/crypto-js/rollups/sha1.js"></script>
+<script src="/xuci/assets/js/crypto-js/rollups/aes.js"></script>
+<script src="/xuci/assets/js/valid.js"></script>
+<script src="/xuci/assets/js/selectbeautify.js"></script>
+<script src="/xuci/assets/js/jquery.dialog.js"></script>
+<script src="/xuci/assets/js/template-web.js"></script>
+
+<script>
+
+    $(function () {
+        getdata();
+        //获取数据
+        function getdata() {
+            $.post("/cgi-bin/status.lua", {getcfg: 1}, function (response, status, xhr) {
+                if (response.code === 0) {
+                    console.log(response);
+                    document.getElementById('ft').innerHTML = template('ft_template', {
+                        data: response
+                    });
+                    document.getElementById('routerinfo').innerHTML = template('routerinfo_template', {
+                        data: response
+                    });
+                    var deviceArr = [];
+                    for (var i in response.deviceArr) {
+                        deviceArr.push(response.deviceArr[i]); //属性
+                    }
+                    console.log(deviceArr);
+                    document.getElementById('devicesTables').innerHTML = template('devicesTables_template', {
+                        deviceArr: deviceArr
+                    });
+
+                    $('#statusDevices_length').text(deviceArr.length);
+                    $('#sysmenu').text(response.wifiName);
+                    $.pub('switchEvent');
+                    $.pub('devices:addevent');
+                    $('#sysmenu').click(sysmenuHandler);
+                    $('#maskMenu').click(maskHandler);
+                }
+            }, "json");
+        }
+    });
+
+
+    function maskHandler(e) {
+        e.preventDefault();
+        $('#noticebar').hide();
+        $('#dropmenu').hide();
+        $('#maskMenu').hide();
+        $('#sysmenu')[0].className = 'name s-dropdown';
+    }
+
+    function sysmenuHandler(e) {
+        e.preventDefault();
+        var that = this,
+            $this = $(this);
+        if ($this.hasClass('s-dropdown')) {
+            var ww = $(window).width();
+            // var rt = (ww - 1160) / 2;
+            var lt = $this.offset().left + $this.outerWidth() - $('#dropmenu').width();
+            $('#dropmenu').css({left: lt});
+            $('#dropmenu').show();
+            that.className = 'name s-dropup';
+        } else {
+            $('#dropmenu').hide();
+            that.className = 'name s-dropdown';
+        }
+        $('#maskMenu').height($(window).height());
+        $('#maskMenu').show();
+    }
+
+
+    $.sub('switchEvent', function () {
+        var timer = null;
+        var statusListener = function () {
+            timer = window.setInterval(function () {
+                $.pub('status:get');
+            }, 10000);
+        };
+        var statusStop = function () {
+            window.clearInterval(timer);
+        }
+        var switchTo = function (idx) {
+            var $tab = $('.nav-tab');
+            var $content = $('.nav-tab-content');
+
+            $tab.removeClass('active');
+            $tab.eq(idx).addClass('active');
+
+            $content.hide();
+            $content.eq(idx).show();
+
+            if (idx == 1) {
+                statusListener();
+                location.hash = 'router';
+            } else {
+                statusStop();
+            }
+            if (idx == 0) {
+                $.pub('devices:getlist');
+                location.hash = 'devices';
+            }
+            if (idx == 2) {
+                $.pub('pppoeStatus');
+                location.hash = 'internet';
+            }
+            // 更新导航tab数据(不需要上来就请求)
+            //$.pub('status:get');
+        };
+        $('.nav-tab').click(function () {
+            var idx = $('.nav-tab').index(this);
+            if ($(this).hasClass('active')) {
+                return;
+            }
+            switchTo(idx);
+        });
+
+        var hash = location.hash;
+        if (hash == '') {
+            switchTo(1);
+        } else {
+            if (/devices/.test(hash)) {
+                switchTo(0);
+            }
+            if (/router/.test(hash)) {
+                switchTo(1);
+            }
+            if (/internet/.test(hash)) {
+                switchTo(2);
+            }
+        }
+
+    });
+
+    $.sub('devices:addevent', function () {
+        //禁止
+        var actKickOut = $.debounce(function (e) {
+            e.preventDefault();
+            var mac = $(this).attr('data-mac');
+            var type = $(this).attr('data-type');
+            var self = $(this).attr('data-self') === '1';
+            if (self) {
+                $.pub('devices:kick_out', {'mac': mac, 'type': type});
+            } else {
+                $.pub('devices:kick_out', {'mac': mac, 'type': type});
+            }
+        }, 300, true);
+        $('body').delegate('.act-kick-out', 'click', actKickOut);
+
+        //允许
+        var actKickBack = $.debounce(function (e) {
+            e.preventDefault();
+            var mac = $(this).attr('data-mac');
+            var type = $(this).attr('data-type');
+            $.pub('devices:add_back', {'mac': mac, 'type': type});
+        }, 300, true);
+        $('body').delegate('.act-add-back', 'click', actKickBack);
+    });
+
+
+    //禁止上网
+    $.sub('devices:kick_out', function (evt, data) {
+        var requestData = {};
+        requestData['mac'] = data.mac;
+        requestData[data.type] = 0;
+        $.pub('loading:start');
+        $.getJSON('/cgi-bin/luci/;stok=0650bdbdf488faa3838a013baaae40f9/api/xqsystem/set_mac_filter', requestData, function (rsp) {
+            $.pub('loading:stop');
+            if (rsp.code === 0) {
+                $.pub('devices:getlist');
+            } else {
+                $.alert(rsp.msg);
+            }
+        });
+    });
+
+    //允许上网
+    $.sub('devices:add_back', function (evt, data) {
+        var requestData = {};
+        requestData['mac'] = data.mac;
+        requestData[data.type] = 1;
+        $.pub('loading:start');
+        $.getJSON('/cgi-bin/luci/;stok=0650bdbdf488faa3838a013baaae40f9/api/xqsystem/set_mac_filter', requestData, function (rsp) {
+            $.pub('loading:stop');
+            if (rsp.code === 0) {
+                $.pub('devices:getlist');
+            } else {
+                $.alert(rsp.msg);
+            }
+        });
+    });
+
+    $.sub('loading:stop', function () {
+        $('html').removeClass('isloading');
+        $('#panel-loading, #panel-loading-mask').remove();
+    });
+
+
+    $.sub('loading:start', function () {
+        var isLoading = $('html').hasClass('isloading');
+        if (isLoading) {
+            return;
+        }
+        var tplMask = '<div id="panel-loading-mask" class="panel-mask" style="position:fixed;left:0;top:0;style:none;"></div>',
+            tplLoading = ''
+                + '<div id="panel-loading" class="panel-loading" style="style:none;">'
+                + '<img src="./assets/img/loading2.gif">'
+                + '</div>',
+            $mask = $(tplMask),
+            $loading = $(tplLoading),
+            zIndex = 10000;
+        $mask.css({
+            'z-index': zIndex,
+            width: $(window).width() + 'px',
+            height: $(window).height() + 'px'
+        });
+        $loading.css({'z-index': zIndex + 1});
+        $mask.appendTo(document.body).show();
+        $loading.appendTo(document.body).show();
+        $('html').addClass('isloading');
+    });
+</script>
+
+</body>
+</html>

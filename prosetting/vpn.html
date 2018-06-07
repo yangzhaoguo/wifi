@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="ie6 oldie" lang="zh"><![endif]-->
+<!--[if IE 7]>
+<html class="ie7 oldie" lang="zh"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 oldie" lang="zh"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh"> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="edge"/>
+    <link rel="icon" href="../logo_ico.ico" type="img/x-ico"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <!--[if lt IE 7]>
+    <![endif]-->
+    <!--[if gte IE 9]>
+    <style>
+        body {
+            filter: none;
+        }
+    </style>
+    <link rel="icon" href="../logo_ico.ico" type="img/x-ico"/>
+    <![endif]-->
+    <title>灵铱科技有限公司</title>
+    <meta name="viewport" content="width=1200">
+    <link href="/xuci/assets/css/bc.css-v=0.0.3.css" rel="stylesheet">
+    <link href="/xuci/assets/css/qos.css-v=0.0.3.css" rel="stylesheet">
+    <link href="/xuci/assets/css/nat.css" rel="stylesheet">
+    <link href="/xuci/assets/css/index.css-v=0.0.3.css" rel="stylesheet">
+    <link href="/xuci/assets/css/vpn.css" rel="stylesheet">
+</head>
+<body>
+<div id="doc">
+    <noscript>
+        <div class="noscript">你的浏览器禁止了Javascript功能，会造成无法使用系统进行路由器管理，请开启。</div>
+    </noscript>
+    <script>
+        var GLOBALHEADER = true;
+    </script>
+    <div id="hd">
+        <div class="inner">
+            <div class="mod-head clearfix">
+                <h1 id="logo">
+                    <a href="/home.html">
+                        <img src="/xuci/assets/img/logo.png" alt="灵铱路由器">
+                    </a>
+                </h1>
+                <div id="nav">
+                    <ul>
+                        <li>
+                            <a href="/home.html">路由状态</a>
+                        </li>
+                        <li>
+                            <a href="/setting/wifi.html">常用设置</a>
+                        </li>
+                        <li class="active">
+                            <a href="/prosetting/qos.html">高级设置</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="userbar" style="display: none">
+                    <span id="sysmenu" class="name s-dropdown">LingYi-WiFi</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="mod-netmap">
+        <div class="mod-set-nav mod-set-nav-pro">
+            <ul class="clearfix li-6">
+                <li><a href="qos.html">
+                    <i class="ico ico-6"></i>
+                    <span>QoS智能限速</span>
+                </a>
+                </li>
+                <li>
+                    <a href="dhcpipmacband.html">
+                        <i class="ico ico-8"></i>
+                        <span>DHCP静态IP分配</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ddns.html">
+                        <i class="ico ico-9"></i>
+                        <span>DDNS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="nat.html">
+                        <i class="ico ico-10"></i>
+                        <span>端口转发</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="vpn.html">
+                        <i class="ico ico-11"></i>
+                        <span>VPN</span>
+                    </a>
+                </li>
+                <li><a href="upnp.html">
+                    <i class="ico ico-7"></i>
+                    <span>其他</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="bd">
+    <div class="mod-set mod-vpn">
+        <div class="hd">
+            <div class="help">
+                <span class="ico"></span>
+                <span class="arrow-wrap" id="helpArrow">
+                        <span class="arrow1"></span>
+                        <span class="arrow2"></span>
+                    </span>
+            </div>
+            <h3>VPN</h3>
+        </div>
+        <div class="bd">
+            <div class="section section-help" id="helpSection">
+                <div class="help-cont">
+                    <span class="help-close"></span>
+                    <div class="what">
+                        <h3>什么是VPN</h3>
+                        <p>VPN属于远程访问技术，应用举例：出差员工在外地通过VPN服务访问企业内部网络。</p>
+                        <p>PPTP（Point to Point Tunneling Protocol）和L2TP（Layer 2 Tunneling
+                            Protocol）为两种互联网隧道协议，都属于VPN（Virtual Private Network）虚拟专用网络的不同协议分类方式。</p>
+                    </div>
+                    <div class="qa">
+                        <h3>常见问题</h3>
+                        <h4>如何设置VPN</h4>
+                        <p>1.首先需要在VPN服务商官网上注册账号，获得用户名、密码、服务器地址、协议类型等信息。</p>
+                        <p>2.将信息添加到服务中，并启用该VPN服务</p>
+                        <h4>注意事项:</h4>
+                        <p>1.VPN用户名、密码、服务器地址、协议类型等信息需要向VPN服务商获取。</p>
+                        <p>2.如果不清楚VPN协议类型，可以选择自动。</p>
+                        <p>3.服务器地址可以是域名或IP地址，具体由服务商提供。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-list">
+                <h4>VPN 服务列表: </h4>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th width="160">名称</th>
+                        <th>协议类型</th>
+                        <th>服务器地址</th>
+                        <th>用户名</th>
+                        <th>状态</th>
+                        <th class="center" width="244">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="vpnlist">
+                    <tr>
+                        <td class="center" colspan="6">查询中...</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="btns">
+                    <a href="#" class="btn btn-dft btn-l" id="btnadditem"><span>添加服务</span></a>
+                </div>
+            </div>
+            <div class="section-set" style="display:none">
+                <span class="k">开机自动连接</span>
+                <a href="#" id="autostart" class="btn-switch btn-switch-off"></a>
+            </div>
+        </div>
+        <div class="hd">
+            <h3>智能VPN分流</h3>
+            <div class="switch">
+                <a href="#" id="smartvpnswitch" class="btn-switch btn-switch-off"></a>
+            </div>
+        </div>
+        <div class="bd">
+            <div id="smartvpnoff"><p>你可以自定义哪些服务或设备会走VPN的流量</p></div>
+            <div id="smartvpnon" class="smartvpnon" style="display:none;">
+                <div id="smartvpnmode" class="tab">
+                    <ul class="clearfix">
+                        <li class="first active" data-mode="1">
+                            按服务地址分流
+                        </li>
+                        <li data-mode="2">
+                            按设备分流
+                        </li>
+                    </ul>
+                </div>
+                <div id="smartvpnmodedesc" class="smartvpnmodedesc">
+                    <p>可以通过添加服务地址来限定哪些服务流量会经过VPN</p>
+                    <p>可以通过添加设备来限定哪些设备可以使用VPN流量</p>
+                </div>
+                <div id="smartvpnmodecont">
+                    <div style="display:none;">
+                        <table class="table">
+                            <thead>
+                            <th>名称</th>
+                            <th style="width:80px; text-align:center;">操作</th>
+                            </thead>
+                            <tbody id="smartvpnurlTbody">
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap">
+                            <button class="btn btn-dft btn-l" id="addsmartvpnurl"><span>添加服务地址</span></button>
+                        </div>
+                    </div>
+                    <div style="display:none;">
+                        <table class="table">
+                            <thead>
+                            <th>名称</th>
+                            <th>MAC地址</th>
+                            <th style="width:80px; text-align:center;">操作</th>
+                            </thead>
+                            <tbody id="smartvpnmacTbody">
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap">
+                            <button class="btn btn-dft" id="addsmartvpndevicelist"><span>从设备列表添加设备</span></button>
+                            <button class="btn btn-dft" id="addsmartvpnmac"><span>通过MAC地址添加</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hd">
+            <h3>灵铱服务走VPN</h3>
+            <div class="switch">
+                <a href="#" id="mivpnswitch" class="btn-switch btn-switch-off"></a>
+            </div>
+        </div>
+        <div class="bd">
+            <p>当你需要通过VPN使用外网时，可以开启此功能保证灵铱路由器APP远程服务可用，其他情况下关闭此功能</p>
+        </div>
+    </div>
+</div>
+
+<div id="ft">
+    <p class="rom-ver">系统版本: 2.25.122 开发版  MAC地址: 78:11:DC:4C:B5:04</p>
+    <p>&copy; 2018 灵铱路由器</p>
+</div>
+<script type="text/template" id="ft_template">
+    <p class="rom-ver">系统版本: <%=(data.fv)%> 开发版  MAC地址: <%=(data.mac)%></p>
+    <p>&copy; 2018 灵铱路由器</p>
+</script>
+
+</div>
+
+<!--[if lt IE 7]>
+<script>
+    try {
+        document.execCommand("BackgroundImageCache", false, true);
+    } catch (e) {
+    }
+</script>
+<![endif]-->
+<div class="mask-menu" id="maskMenu"
+     style="position:fixed;left:0;top:0; width:100%; height:100%; z-index:2; display:none;"></div>
+<div id="dropmenu" class="dropmenu" style="z-index:3; display:none;">
+    <ul>
+        <li><a href="#" id="toRename">修改路由器名称</a></li>
+
+        <li><a href="/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/web/setting/upgrade">系统升级</a></li>
+
+        <li><a href="#" id="toDownloadClient">下载客户端</a></li>
+        <li><a href="#" id="toReboot">重启</a></li>
+
+        <li class="last"><a href="/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/web/logout">注销</a></li>
+    </ul>
+</div>
+<div id="noticebar" class="noticebar" style="z-index:3; display:none;">
+    <i class="ico-arrow"></i>
+    <div class="content"></div>
+</div>
+<script>
+    var i18n = {};
+    i18n.dialog = {
+        ok: '确认',
+        cancel: '取消',
+        loading: '加载中...',
+        dlgtitle: '消息框'
+    };
+    i18n.valid = {
+        n_integer: '请输入一个{$0}位正整数。',
+        n_format: '数字输入格式为&#34;{$0}&#34;。',
+        n_upper: '输入值太大，最大允许{$0}。', //注意：{$0}表示允许值，{$1}表示实际值
+        n_lower: '输入值太小，最小允许{$0}。',
+        nrange_from: '您输入的范围不合理。',
+        nrange_to: '您输入的范围不合理。',
+        n_useless_zero: '数字前面好像有多余的&#34;0&#34;。',
+        d_format: '日期输入格式为&#34;YYYY-MM-DD&#34;。',
+        d_upper: '日期太晚，最晚允许{$0}。',
+        d_lower: '日期太早，最早允许{$0}。',
+        daterange_from: '起始日期不能大于截止日期。',
+        daterange_to: '截止日期不能小于起始日期。',
+        daterange_larger_span: "时间跨度不得超过{$0}天。",
+        text_longer: '最多允许{$0}个字。', //'{$1}字太多，最多允许{$0}字'
+        text_shorter: '请至少输入{$0}个字。', //'{$1}字太少，最少允许{$0}字'
+        bytetext_longer: '最多允许{$0}个字节。', //'{$1}字节太多，最多允许{$0}字节'
+        bytetext_shorter: '请至少输入{$0}个字节。', //'{$1}字节太少，最少允许{$0}字节'
+        richtext_longer: '最多允许{$0}个字。',
+        richtext_shorter: '请至少输入{$0}个字。',
+        _reconfirm: '两次输入不一致。',
+        _time: '请检查您输入的时间格式。',
+        _minute: '请检查您输入的时间格式。',
+        _email: '请检查您输入的Email格式。',
+        _mobilecode: '请检查您输入的手机号码。',
+        _phone: '请检查您输入的电话号码。',
+        _phonewithext: '请检查您输入的电话号码。',
+        _phonezone: '请检查您输入的电话区号。',
+        _phonecode: '请检查您输入的电话号码。',
+        _phoneext: '请检查您输入的电话分机号码。',
+        _zipcode: '请检查您输入的邮政编码。',
+        _idnumber: '请检查您输入的身份证号码，目前只支持15位或者18位。',
+        _bankcard: '请检查您输入的银行账号。',
+        _cnname: '请检查您输入的姓名。',
+        _vcode: '请检查您输入的验证码。',
+        _imgfile: '请检查您选择的图片文件路径，只支持jpg、jpeg、png、gif、tif、bmp格式。',
+        _regexp: '请检查您的输入。',
+        _magic: '请检查您的输入。',
+        _req_text: '请填写{$0}。',
+        _req_select: '请选择{$0}。',
+        _req_file: '请上传{$0}。',
+        _logicrequired: '{$0}输入不完整.',
+        _ssid: '请输入标准字符，如 Xiaomi.Luyouqi',
+        _macaddr: 'MAC地址格式有误，如ab:cd:ef:11:22:33',
+        _weppassword: '密码输入有误',
+        _wifipassword: '不能包含中文',
+        _ipaddr: 'IP地址由4个 0~255 之间的数字组成，数字之间用点区隔',
+        _url: '必须是完整的URL,如 http://miwifi.com'
+    };
+</script>
+<script src="/xuci/assets/js/jquery-1.8.3.js"></script>
+<script src="/xuci/assets/js/qwrap.js"></script>
+<script src="/xuci/assets/js/common.js"></script>
+<script src="/xuci/assets/js/raphael.js"></script>
+<script src="/xuci/assets/js/crypto-js/rollups/sha1.js"></script>
+<script src="/xuci/assets/js/crypto-js/rollups/aes.js"></script>
+<script src="/xuci/assets/js/valid.js"></script>
+<script src="/xuci/assets/js/selectbeautify.js"></script>
+<script src="/xuci/assets/js/jquery.dialog.js"></script>
+<script src="/xuci/assets/js/template-web.js"></script>
+<script>
+    (function () {
+        var G_FEATURES = $.parseJSON('{"netmode":{"elink":"1"},"hardware":{"disk":"0","usb":"1"},"wifi":{"wifimerge":"1","wifiguest":"1","wifi24":"1","wifi50":"1"},"apps":{"apptc":"0","qos":"1"},"apmode":{"lanapmode":"1","wifiapmode":"1"},"system":{"infileupload":"1","downloadlogs":"0","shutdown":"0","i18n":"0","task":"0"}}');
+        window['G_FEATURES'] = G_FEATURES;
+    }())
+</script>
+
+<script>
+    // reboot
+    var global_api_reboot = {
+        url: '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/reboot',
+        param: {"client": "web"}
+    };
+
+    function reboot_window(needconfirm) {
+        console.log(needconfirm);
+        var reboot = function () {
+            $.getJSON(global_api_reboot.url, global_api_reboot.param, function (rsp) {
+                if (rsp.code !== 0) {
+                    $.alert(rsp.msg).time(1.5 * 1000);
+                } else {
+                    var ip = rsp.lanIp[0].ip;
+                    rebootWait({
+                        lanIp: ip,
+                        action: '重启路由器',
+                        refresh: true
+                    });
+                }
+            });
+        };
+        if (typeof( needconfirm ) !== "undefined" && needconfirm === false) {
+            reboot();
+            return;
+        }
+        $.confirm('确定重启路由器，重启将断开和灵铱路由器的连接。', function () {
+            var dlg = this;
+            reboot();
+            dlg.close();
+            return false;
+        });
+    }
+
+    // shutdown
+    function shutdown_window() {
+        $.confirm('是否确定关闭路由器，操作将断开和灵铱路由器的连接。', function () {
+            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/shutdown', {}, function (rsp) {
+                if (rsp.code !== 0) {
+                    $.alert(rsp.msg).time(1.5 * 1000);
+                } else {
+                    $.loadingDialog({
+                        title: '关闭路由器',
+                        content: '关机中，请等待路由器指示灯熄灭后再断开电源'
+                    });
+                }
+            });
+        });
+    }
+
+    //reset
+    function reset_window(format) {
+
+        var reset = (function (format) {
+            var requestURL = '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/reset',
+                requestData = {
+                    format: format ? 1 : 0
+                },
+                wait = function () {
+                    rebootWait({
+                        action: '恢复出厂设置',
+                        refresh: true,
+                        lanIp: '192.168.31.1'
+                    });
+                },
+                clearCookies = function () {
+                    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+                    if (keys) {
+                        for (var i = keys.length; i--;) {
+                            document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();
+                        }
+                    }
+                };
+
+            return function () {
+                $.getJSON(requestURL, requestData, function (rsp) {
+                    if (rsp.code !== 0) {
+                        $.alert(rsp.msg).time(3 * 1000);
+                    } else {
+                        // clear cookies
+                        clearCookies();
+                        //block wait
+                        wait();
+                    }
+                });
+            }
+        })(format);
+
+        $.confirm('确定要恢复出厂设置让灵铱路由器回到初始状态？', function () {
+            reset();
+        });
+    }
+</script>
+<script type="text/tmpl" id="tplrename">
+<div class="mod-rename-dlg">
+    <p class="img"><img src="/xiaoqiang/web/img/topograph/router_r3g_101.png"></p>
+    <div class="form-rename">
+        <form action="#" class="form" id="routerNameEdit">
+            <div class="form-item">
+                <label class="k">路由器名称</label>
+                <span class="v">
+                    <input type="text" name="routername" id="routername" class="ipt-text" autocomplete="off" datatype="bytetext" maxlength="24" reqMsg="路由器名称" value="{$name}">
+                </span>
+                <em class="t"></em>
+            </div>
+            <div class="form-item">
+                <label class="k">位置</label>
+                <span class="v">
+                    <input type="text" name="locale" id="locale" class="ipt-text" autocomplete="off" datatype="bytetext" maxlength="24" reqMsg="路由器位置" value="{$locale}">
+                </span>
+                <em class="t"></em>
+            </div>
+            <div class="form-contral">
+                <button type="submit" class="btn btn-primary btn-l"><span>保存</span></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</script>
+<script type="text/tmpl" id="tplshutdown">
+<div class="mod-reboot-dlg">
+    <p class="img"><img src="/xiaoqiang/web/img/ico_shutdown.png"></p>
+    <p class="text">关闭路由器将断开其他设备的数据访问和网络连接，之后便可以安全的断开电源。（再次启动需要手工连接电源）</p>
+    <button id="shutdownAction" type="button" class="btn btn-primary btn-l"><span>关闭路由器</span></button>
+</div>
+
+</script>
+<script type="text/tmpl" id="tplreboot">
+<div class="mod-shutdown-dlg">
+    <p class="img"><img src="/xiaoqiang/web/img/ico_reboot.png"></p>
+    <p class="text">路由器重启需要等待十几秒或更多时间，重启过程中将会断开网络连接，稍后将自动重新连接网络。</p>
+    <button type="button" id="rebootAction" class="btn btn-primary btn-l"><span>重启路由器</span></button>
+</div>
+
+</script>
+<script type="text/tmpl" id="tpldownloadclient">
+<div class="mod-downloadclient-dlg">
+    <table>
+        <tr>
+            <td>
+                <i class="ico-down-client ico-down-pc"></i>
+                <a href="http://bigota.miwifi.com/xiaoqiang/client/xqpc_client.exe">PC客户端</a>
+            </td>
+            <td class="c1"></td>
+            <td class="c2"></td>
+            <td>
+                <i class="ico-down-client ico-down-mac"></i>
+                <a href="http://bigota.miwifi.com/xiaoqiang/client/xqmac_client.dmg">MAC客户端</a>
+            </td>
+        </tr>
+        <tr class="last">
+            <td>
+                <i class="ico-down-client ico-down-andriod"></i>
+            
+                <a href="http://bigota.miwifi.com/xiaoqiang/client/xqapp_dev.apk">Android客户端</a>
+                <img class="onlineimg" src-local="/xiaoqiang/web/img/2dcode.png" src="http://www1.miwifi.com/statics/img/wf_2dcode_an_dl_dev.png">
+            
+            </td>
+            <td class="c1"></td>
+            <td class="c2"></td>
+            <td>
+                <i class="ico-down-client ico-down-iphone"></i>
+                <a href="https://itunes.apple.com/cn/app/id859962702?mt=8&ls=1">iPhone客户端</a>
+                <img class="onlineimg" src-local="/xiaoqiang/web/img/2dcode.png" src="http://www1.miwifi.com/statics/img/wf_2dcode_ios_dl.png">
+            </td>
+        </tr>
+    </table>
+</div>
+
+</script>
+<script>
+    var DEBUG = false;
+    if (!window.console || DEBUG == false) {
+        window.console = {
+            log: function () {
+            }
+        };
+    }
+
+    var Encrypt = {
+        key: 'a2ffa5c9be07488bbb04a3a47d3c5f6a',
+        iv: '64175472480004614961023454661220',
+        nonce: null,
+        init: function () {
+            var nonce = this.nonceCreat();
+            this.nonce = nonce;
+            return this.nonce;
+        },
+        nonceCreat: function () {
+            var type = 0;
+            var deviceId = '34:de:1a:96:49:43';
+            var time = Math.floor(new Date().getTime() / 1000);
+            var random = Math.floor(Math.random() * 10000);
+            return [type, deviceId, time, random].join('_');
+        },
+        oldPwd: function (pwd) {
+            return CryptoJS.SHA1(this.nonce + CryptoJS.SHA1(pwd + this.key).toString()).toString();
+        },
+        newPwd: function (pwd, newpwd) {
+            var key = CryptoJS.SHA1(pwd + this.key).toString();
+            key = CryptoJS.enc.Hex.parse(key).toString();
+            key = key.substr(0, 32);
+            key = CryptoJS.enc.Hex.parse(key);
+            var password = CryptoJS.SHA1(newpwd + this.key).toString();
+            var iv = CryptoJS.enc.Hex.parse(this.iv);
+            var aes = CryptoJS.AES.encrypt(
+                password,
+                key,
+                {iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7}
+            ).toString();
+            return aes;
+        }
+    };
+
+    var pingRouter = function (on, off, ip) {
+        var online = on || function () {
+            },
+            offline = off || function () {
+            },
+            host = ip || location.host,
+            imgUrl = 'http://' + host + '/xiaoqiang/web/img/logo.png',
+            time = 5000,
+            timecounter = 0,
+            img = null,
+            wait = function () {
+                console.log('pingRouter:wait');
+                offline();
+            },
+            done = function () {
+                console.log('pingRouter:done');
+                window.clearInterval(timer);
+                online();
+            },
+            loadImg = function (onload, onerror) {
+                img = new Image();
+                img.onload = onload;
+                img.onerror = onerror;
+                img.src = imgUrl + '?' + (+new Date());
+            },
+            timer = window.setInterval(function () {
+
+                if ('onLine' in navigator) {
+                    if (navigator.onLine) {
+                        loadImg(
+                            function () {
+                                done();
+                            }, function () {
+                                wait();
+                            }
+                        );
+                    } else {
+                        wait();
+                    }
+                } else {
+                    loadImg(function () {
+                        done();
+                    }, function () {
+                        wait();
+                    });
+                }
+            }, time);
+    };
+
+    var rebootWait = function (opt) {
+        var action = opt.action,
+            ip = opt.lanIp || window.location.host,
+            refresh = opt.refresh || false,
+            tStart = ( +new Date() ),
+            tUse,
+            dlgRebootWait = $.loadingDialog({
+                title: '重启中...',
+                content: '操作生效，等待设备重启...'
+            }),
+            online = function () {
+                dlgRebootWait.content('操作生效,重启成功！');
+                dlgRebootWait.time(3 * 1000);
+                if (refresh) {
+                    window.setTimeout('window.top.location.href="http://' + ip + '";', 3000);
+                }
+            },
+            offline = function () {
+                tUse = Math.round(( ( +new Date() ) - tStart ) / 1000);
+                if (tUse > 150) {
+                    dlgRebootWait.content('自动连接路由器失败，请检查无线或者网线是否连接正确。');
+                    return;
+                }
+                dlgRebootWait.content(action + ', 等待自动跳转... 用时{$time}秒'.tmpl({time: tUse}));
+            };
+
+        window.setTimeout(function () {
+            pingRouter(online, offline, ip);
+        }, 1000 * 60);
+    };
+
+    (function ($) {
+
+        function formInit(container) {
+            var clsInput = 'form-item form-item-input',
+                clsEmpty = 'form-item form-item-empty',
+                clsDisabled = 'form-item-disabled',
+                clsError = 'form-item-err',
+                clsPassword = 'form-item-pwd';
+
+            container = container || 'body';
+            $(container).find('.form-item input').each(function () {
+                var me = this,
+                    $me = $(me),
+                    parent = $(me.parentNode.parentNode),
+                    label = parent.find('.k'),
+                    offsetX = $me.position().left;
+                if (!( this.type == 'text' || this.type == 'password' )) {
+                    return;
+                }
+                // some input do not need init
+                if ($me.hasClass('no-init')) {
+                    return;
+                }
+                if (me.value !== '') {
+                    parent[0].className = clsInput;
+                } else {
+                    parent[0].className = clsEmpty;
+                    if (offsetX > 0) {
+                        label.css({'left': offsetX + 10});
+                    }
+                }
+                if (me.disabled) {
+                    parent.addClass(clsDisabled);
+                }
+                if ($me.attr('data-type') === 'password') {
+                    parent.addClass(clsPassword);
+                    parent.append('<i class="bt-showpwd bt-showpwd-off"></i>');
+                }
+
+                label.on('click', function (e) {
+                    try {
+                        me.focus();
+                    } catch (ex) {
+                    }
+                });
+
+            });
+            var focusHandler = function () {
+                if (!( this.type == 'text' || this.type == 'password' )) {
+                    return;
+                }
+                var me = $(this),
+                    parent = $(this.parentNode.parentNode),
+                    label = parent.find('.k'),
+                    t = parent.find('.t'),
+                    classname;
+                if (me.hasClass('no-init')) {
+                    return;
+                }
+                if (parent.hasClass(clsPassword)) {
+                    classname = clsInput + ' ' + clsPassword;
+                } else {
+                    classname = clsInput;
+                }
+                if (parent.hasClass(clsError)) {
+                    t.hide();
+                }
+                label.css({'left': 'auto'});
+                label.hide();
+                parent[0].className = classname;
+            };
+            var blurHandler = function () {
+                var me = this,
+                    $me = $(me),
+                    parent = $(me.parentNode.parentNode),
+                    classname,
+                    label = parent.find('.k'),
+                    offsetX = $me.position().left;
+                if (!( this.type == 'text' || this.type == 'password' )) {
+                    return;
+                }
+                if ($(this).hasClass('no-init')) {
+                    return;
+                }
+                label.show();
+                if (me.value == '') {
+                    if (parent.hasClass(clsPassword)) {
+                        classname = clsEmpty + ' ' + clsPassword;
+                    } else {
+                        classname = clsEmpty;
+                    }
+                    if (offsetX > 0) {
+                        label.css({'left': offsetX + 10});
+                    } else {
+                        label.css({'left': 12});
+                    }
+                    parent[0].className = classname;
+                }
+            };
+            var addInputEvent = function () {
+                $(container).find('.form-item input')
+                    .on('focus', focusHandler)
+                    .on('blur', blurHandler);
+            };
+
+            var delInputEvent = function () {
+                $(container).find('.form-item input').off('focus', focusHandler);
+                $(container).find('.form-item input').off('blur', blurHandler);
+            };
+            // del password event
+            $('body').undelegate('.bt-showpwd', 'click');
+            $('body').delegate('.bt-showpwd', 'click', function (e) {
+                console.log('showpwd');
+                var me = this,
+                    meclass = 'bt-showpwd',
+                    formItem = $(this).closest('.form-item'),
+                    input = formItem.find('input'),
+                    inputValue = input.val(),
+                    inputWrap = formItem.find('.v'),
+                    newinput = '',
+                    inputHTML = inputWrap.html();
+
+                if (input.attr('type') == 'password') {
+                    newinput = inputHTML.replace(/type\s*=\s*('|")?password('|")?/ig, 'type="text"');
+                    inputWrap.html(newinput).find('input')[0].value = inputValue;
+                    me.className = meclass + ' bt-showpwd-on';
+                } else {
+                    newinput = inputHTML.replace(/type\s*=\s*('|")?text('|")?/ig, 'type="password"');
+                    inputWrap.html(newinput).find('input')[0].value = inputValue;
+                    me.className = meclass + ' bt-showpwd-off';
+                }
+
+                setTimeout(function () {
+                    delInputEvent();
+                    addInputEvent();
+                }, 0);
+            });
+
+            addInputEvent();
+        }
+
+        $.formInit = formInit;
+
+    })(jQuery);
+
+    /**
+     * byte format
+     */
+    function byteFormat(number, precision, isarray) {
+        var val,
+            label,
+            ret;
+        precision = precision || 100,
+            isarray = isarray || false;
+        if (number > 1024 * 1024 * 1024) {
+            val = Math.floor(number / 1024 / 1024 / 1024 * precision) / precision;
+            label = 'GB';
+        } else if (number > 1024 * 1024 && number < 1024 * 1024 * 1024) {
+            val = Math.floor(number / 1024 / 1024 * precision) / precision;
+            label = 'MB';
+        } else {
+            val = Math.floor(number / 1024 * precision) / precision;
+            label = 'KB';
+        }
+
+        if (isarray) {
+            ret = [val, label];
+        } else {
+            ret = val + label;
+        }
+
+        return ret;
+    }
+
+
+    function secondToHour(time) {
+        var pint = function (num) {
+                return parseInt(num, 10);
+            },
+            hour = pint(time / 3600.0),
+            minute = pint((parseFloat(time / 3600.0) - hour) * 60),
+            second = pint(time) - hour * 3600 - minute * 60,
+            format = hour + '小时' + minute + '分' + second + '秒';
+        return format;
+    }
+
+    function secondToDate(second) {
+        var time = parseFloat(second),
+            pint = function (num) {
+                return parseInt(num, 10);
+            },
+            day;
+        if (time !== null && time !== "") {
+            if (time > 60 && time < 60 * 60) {
+                time = pint(time / 60.0) + '分' + pint((parseFloat(time / 60.0) - pint(time / 60.0, 10)) * 60) + '秒';
+            }
+            else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+                time = secondToHour(time);
+            } else if (time >= 24 * 60 * 60) {
+                day = pint(time / (3600.0 * 24));
+                time = time - (day * 3600 * 24);
+                time = day + '天 ' + secondToHour(time);
+            }
+            else {
+                time = pint(time) + '秒';
+            }
+        }
+        return time;
+    }
+
+    (function ($) {
+        function pint(num) {
+            return parseInt(num, 10);
+        }
+
+        function secondToHour(time) {
+            var hour = pint(time / 3600.0),
+                minute = pint((parseFloat(time / 3600.0) - hour) * 60),
+                second = pint(time) - hour * 3600 - minute * 60,
+                format = hour + '小时' + minute + '分' + second + '秒';
+            return format;
+        }
+
+        function secondToDate(second) {
+            var time = parseFloat(second),
+                day;
+            if (time !== null && time !== "") {
+                if (time > 60 && time < 60 * 60) {
+                    time = pint(time / 60.0) + '分' + pint((parseFloat(time / 60.0) - pint(time / 60.0, 10)) * 60) + '秒';
+                }
+                else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+                    time = secondToHour(time);
+                } else if (time >= 24 * 60 * 60) {
+                    day = pint(time / (3600.0 * 24));
+                    time = time - (day * 3600 * 24);
+                    time = day + '天' + secondToHour(time);
+                }
+                else {
+                    time = pint(time) + '秒';
+                }
+            }
+            return time;
+        }
+
+        function secondToDate2(second) {
+            var time = parseFloat(second),
+                num = 0,
+                unit = '天';
+            console.log(second, time);
+            if (!isNaN(time)) {
+                if (time > 60 && time < 60 * 60) {
+                    num = Math.floor(time / 60.0);
+                    unit = '分钟';
+                } else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+                    num = Math.floor(time / 3600.0);
+                    unit = '小时'
+                } else if (time >= 24 * 60 * 60) {
+                    num = Math.floor(time / (3600.0 * 24));
+                    unit = '天';
+                } else {
+                    num = Math.floor(time);
+                    unit = '秒';
+                }
+            }
+            return {
+                num: num,
+                unit: unit
+            };
+        }
+
+        $.secondToHour = secondToHour;
+        $.secondToDate = secondToDate;
+        $.secondToDate2 = secondToDate2;
+    })(jQuery);
+
+
+    $(document).ajaxSuccess(function (event, xhr, settings) {
+        var rsp = xhr.responseText;
+        rsp = $.parseJSON(rsp);
+        // console.log(event, xhr, settings);
+        var ignore = [
+            'api\/xqsystem\/login',
+            'api\/xqsystem\/upgrade_rom'
+        ];
+        for (var i = 0; i < ignore.length; i++) {
+            var ignoreTest = new RegExp(ignore[i]);
+            // console.log( ignoreTest );
+            if (ignoreTest.test(settings.url)) {
+                return;
+            }
+        }
+        if (rsp.code === 401 || rsp.code === 403) {
+            document.location.href = 'http://' + location.host;
+        }
+    });
+
+    $.sub('wait', function (evt, data) {
+        var selector = data.id;
+        if (!$.waitStatus) {
+            $.waitStatus = {};
+        }
+        $.waitStatus[selector] = $(selector).text();
+        $(selector).addClass('btn-primary-disabled').prop('disabled', true).find('span').text('处理中...');
+    });
+
+    $.sub('done', function (evt, data) {
+        var selector = data.id,
+            text = $.waitStatus[selector];
+        $(selector).removeClass('btn-primary-disabled').prop('disabled', false).find('span').text(text);
+    });
+
+    $.sub('loading:start', function () {
+        var isLoading = $('html').hasClass('isloading');
+        if (isLoading) {
+            return;
+        }
+        var tplMask = '<div id="panel-loading-mask" class="panel-mask" style="position:fixed;left:0;top:0;style:none;"></div>',
+            tplLoading = ''
+                + '<div id="panel-loading" class="panel-loading" style="style:none;">'
+                + '<img src="/img/loading2.gif">'
+                + '</div>',
+            $mask = $(tplMask),
+            $loading = $(tplLoading),
+            zIndex = 10000;
+        $mask.css({
+            'z-index': zIndex,
+            width: $(window).width() + 'px',
+            height: $(window).height() + 'px'
+        });
+        $loading.css({'z-index': zIndex + 1});
+        $mask.appendTo(document.body).show();
+        $loading.appendTo(document.body).show();
+        $('html').addClass('isloading');
+    });
+
+    $.sub('loading:stop', function () {
+        $('html').removeClass('isloading');
+        $('#panel-loading, #panel-loading-mask').remove();
+    });
+
+    // dialog block loading
+    (function ($) {
+        $.loadingDialog = function (config) {
+            var mix = ObjectH.mix,
+                _config = config || {
+                    title: '',
+                    content: ''
+                },
+                conf = mix(_config, {
+                    width: 390,
+                    padding: '25px 30px',
+                    title: config.title,
+                    content: '<p style="padding-bottom:30px;">{$content}</p><div class="loading-bar"></div>'.tmpl({content: config.content}),
+                    cancel: false
+                }, true),
+                dialog = $.dialog(conf);
+
+            var oldcontent = dialog.content;
+            dialog.content = function (cont) {
+                var _cont = '<p style="padding-bottom:30px;">{$content}</p><div class="loading-bar"></div>'.tmpl({content: cont});
+                return oldcontent.call(dialog, _cont);
+            };
+            return dialog;
+        }
+    })(jQuery);
+
+    // dialog alert
+    (function ($) {
+        $.alert = function (content, ok) {
+            ok = ok || function () {
+            };
+            return $.dialog({
+                width: 390,
+                padding: '25px 30px',
+                title: '提示信息',
+                content: content,
+                ok: ok,
+                cancel: false
+            });
+        }
+    })(jQuery);
+
+    // dialog confirm
+    (function ($) {
+        $.confirm = function (content, ok, cancel) {
+            var _cancel = cancel || function () {
+            };
+            return $.dialog({
+                width: 390,
+                padding: '25px 30px',
+                title: '确认信息',
+                content: content,
+                ok: ok,
+                cancel: _cancel,
+                lock: true
+            });
+        }
+    })(jQuery);
+
+    // wechat code dialog
+    $(function () {
+        $('#wechatcode').click(function (e) {
+            e.preventDefault();
+            var $this = $(this),
+                href = $this.attr('href');
+            $.dialog({
+                title: '官方微信',
+                content: '<img width="200" src="' + href + '">',
+                width: 250,
+                lock: true
+            });
+        });
+    });
+
+
+    // set sys language
+    (function ($) {
+        $.i18nSet = function (el) {
+            var $lan = $(el),
+                apiGetLan = '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/get_languages',
+                apiSetlan = '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/set_language',
+                dtd = $.Deferred();
+
+            $.get(apiGetLan, function (rsp) {
+                var rsp = $.parseJSON(rsp);
+                var selectContent = [];
+                if (rsp.code == 0) {
+                    for (var i = 0; i < rsp.list.length; i++) {
+                        var item = rsp.list[i],
+                            selected = item.lang == rsp.lang ? 'selected' : '',
+                            option = '<option value="' + item.lang + '" ' + selected + '>' + item['name'] + '</option>';
+                        // clear old conf en item
+                        // if ( item.lang != 'en') {
+                        selectContent.push(option);
+                        // }
+                    }
+                    ;
+                    $lan.html(selectContent.join(''));
+                    dtd.resolve();
+                }
+            });
+
+            $lan.on('change', function (e) {
+                var el = this,
+                    val = $(this).val();
+                $.pub('loading:start');
+                $.post(apiSetlan, {language: val}, function (rsp) {
+                    var rsp = $.parseJSON(rsp);
+                    if (rsp.code == 0) {
+                        location.reload(1);
+                    } else {
+                        $.alert(rsp.msg);
+                    }
+                    $.pub('loading:stop');
+                });
+            });
+
+            return dtd.promise();
+        };
+    }(jQuery));
+
+
+    // global event
+    (function ($) {
+        var dlgReboot,
+            dlgShutdown,
+            dlgRouterName;
+
+        function getNotice() {
+            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/messages', function (rsp) {
+                if (rsp.code == 0) {
+                    var classname;
+                    if (rsp.count > 0) {
+                        classname = 'ico-notice-new';
+                    } else {
+                        classname = 'ico-notice';
+                    }
+                    $('#sysnotice')[0].className = classname;
+                    var msgMap = {
+                        '1': '<p>检测到最新版本为{$version}，<a href="/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/web/setting/upgrade">点击此处立即升级</a>。</p>',
+                        '3': '<p>5G Wi-Fi启动失败，<a target="_blank" href="http://www.mi.com/service/contact/">请联系灵铱客服解决</a></p>',
+                        '4': '<p>检测到与上级路由器存在IP冲突，建议切换到<a href="/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/web/setting/wan#netmode">有线中继模式</a>或者<a href="#" id="ipconflict" data-ip="{$ip}">避让IP冲突</p>'
+                    };
+                    var msgHTML = [];
+                    for (var i = rsp.messages.length - 1; i >= 0; i--) {
+                        msgHTML.push(msgMap[rsp.messages[i].type].tmpl(rsp.messages[i].data));
+                    }
+                    ;
+                    $('#noticebar .content').html(msgHTML.join(''));
+
+                    if (rsp.count > 0) {
+                        $('#sysnotice').trigger('click');
+                    }
+                }
+            });
+        }
+
+        function reNameHandler(e) {
+            e.preventDefault();
+            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/router_name')
+                .done(function (rsp) {
+                    if (rsp.code == 0) {
+                        var html = StringH.tmpl($('#tplrename').html(), {
+                            locale: StringH.encode4HtmlValue(rsp.locale),
+                            name: StringH.encode4HtmlValue(rsp.name)
+                        });
+                        dlgRouterName = $.dialog({
+                            width: 390,
+                            title: '修改路由器名称',
+                            content: html,
+                            lock: true
+                        });
+                        setTimeout(function () {
+                            $.formInit('.mod-rename-dlg');
+                            $.selectBeautify({container: '.mod-rename-dlg'});
+                        }, 100);
+                    }
+                });
+        }
+
+        function downloadClientHandler(e) {
+            e.preventDefault();
+            $.dialog({
+                width: 390,
+                title: '下载客户端',
+                content: $('#tpldownloadclient').html(),
+                lock: true
+            });
+            setTimeout(function () {
+                $('.onlineimg').each(function () {
+                    var img = new Image();
+                    var el = this;
+                    var remote = el.src;
+                    var local = $(el).attr('src-local');
+                    img.onerror = function () {
+                        el.src = local;
+                    }
+                    img.src = remote;
+                });
+            }, 100);
+        }
+
+        function rebootHandler(e) {
+            e.preventDefault();
+            dlgReboot = $.dialog({
+                width: 390,
+                title: '重启路由器',
+                content: $('#tplreboot').html(),
+                lock: true
+            });
+        }
+
+        function shutdownHandler(e) {
+            e.preventDefault();
+            dlgShutdown = $.dialog({
+                width: 390,
+                title: '路由器关机',
+                content: $('#tplshutdown').html(),
+                lock: true
+            });
+        }
+
+        function noticeHandler(e) {
+            e.preventDefault();
+            var that = this,
+                $this = $(this),
+                pos = $('#userbar').position(),
+                right,
+                wt = 1160,
+                wwt = $(window).width(),
+                $arrow = $('#noticebar .ico-arrow');
+            if ($this.hasClass('ico-notice-new')) {
+                // right = wt - pos.left - 20;
+                $arrow.css({'right': '10px'});
+                $('#noticebar').css({'right': (wwt - wt) / 2});
+                $('#noticebar').toggle();
+            }
+            $('#maskMenu').height($(window).height());
+            $('#maskMenu').show();
+        }
+
+        function sysmenuHandler(e) {
+            e.preventDefault();
+            var that = this,
+                $this = $(this);
+            if ($this.hasClass('s-dropdown')) {
+                var ww = $(window).width();
+                // var rt = (ww - 1160) / 2;
+                var lt = $this.offset().left + $this.outerWidth() - $('#dropmenu').width();
+                $('#dropmenu').css({left: lt});
+                $('#dropmenu').show();
+                that.className = 'name s-dropup';
+            } else {
+                $('#dropmenu').hide();
+                that.className = 'name s-dropdown';
+            }
+            $('#maskMenu').height($(window).height());
+            $('#maskMenu').show();
+        }
+
+        function maskHandler(e) {
+            e.preventDefault();
+            $('#noticebar').hide();
+            $('#dropmenu').hide();
+            $('#maskMenu').hide();
+            $('#sysmenu')[0].className = 'name s-dropdown';
+        }
+
+        $(function () {
+            // notice
+            $('#sysnotice').click(noticeHandler);
+            // user dropmenu
+            $('#sysmenu').click(sysmenuHandler);
+            // space click
+            $('#maskMenu').click(maskHandler);
+            // rename
+            $('body').delegate('#toRename', 'click', reNameHandler);
+            // toDownloadClient
+            $('body').delegate('#toDownloadClient', 'click', downloadClientHandler);
+            // toReboot
+            $('body').delegate('#toReboot', 'click', rebootHandler);
+            // toShutdown
+            $('body').delegate('#toShutdown', 'click', shutdownHandler);
+
+            $('body').delegate('#shutdownAction', 'click', function (e) {
+                e.preventDefault();
+                dlgShutdown.close();
+                shutdown_window();
+            });
+
+            $('body').delegate('#rebootAction', 'click', function (e) {
+                e.preventDefault();
+                dlgReboot.close();
+                reboot_window();
+            });
+
+            $('body').delegate('#routerNameEdit', 'submit', function (e) {
+                e.preventDefault();
+                var validator = Valid.checkAll(this);
+                var routername = $('#routername').val();
+                var locale = $('#locale').val();
+                if (validator) {
+                    $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/set_router_name', {
+                        name: routername,
+                        locale: locale
+                    }).done(function (rsp) {
+                        if (rsp.code == 0) {
+                            location.reload(1);
+                        } else {
+                            $.alert(rsp.msg)
+                        }
+                    });
+                }
+            });
+
+            $('body').delegate('#ipconflict', 'click', function (e) {
+                e.preventDefault();
+                var api = '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/r_ip_conflict',
+                    ip = $(this).attr('data-ip');
+                $.dialog({
+                    title: '避让IP冲突',
+                    content: '执行此操作，局域网IP将会变更为' + ip + '<br>' + '该过程无线网络会重启，将出现短暂掉线。',
+                    lock: true,
+                    ok: function () {
+                        $.post(api, function (rsp) {
+                            rsp = $.parseJSON(rsp);
+                            if (rsp.code !== 0) {
+                                alert(rsp.msg);
+                            }
+                        });
+                    },
+                    cancel: function () {
+                    }
+                });
+            });
+
+            // user logined and has global header get notice
+            if (typeof(GLOBALHEADER) !== 'undefined' && GLOBALHEADER === true) {
+                getNotice();
+            }
+        });
+    })(jQuery);
+</script>
+<script src="/js/miwifi-monitor.js"></script>
+<script>
+    // 流量统计
+    (function () {
+        var IS_MOBILE = (
+            navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+        );
+        var PAGEURL = document.URL.split('/web/')[1];
+        var PAGE_MONITOR_CONF = {
+            deviceId: '6d2e3d4e-b63e-a37f-82fb-b21defee7f2e',
+            isMobile: IS_MOBILE ? IS_MOBILE[0] : 'pc',
+            url: PAGEURL ? '/web/' + PAGEURL : '/web/login',
+            romVersion: '2.25.122',
+            romChannel: 'stable',
+            hardwareVersion: 'R3G'
+        };
+        MIWIFI_MONITOR.setProject('MIWIFIWEB');
+        MIWIFI_MONITOR.log(PAGE_MONITOR_CONF, 'track');
+
+        $(document).ajaxSend(function (event, jqxhr, settings) {
+            var apiUrl = settings.url.split('/api/')[1],
+                api = '/api/' + apiUrl.split('?')[0],
+                apiParams = StringH.queryUrl(apiUrl);
+
+            // console.log(apiUrl, api, apiParams);
+
+            var API_MONITOR_CONF = ObjectH.mix({element: 'apicall', api: api}, [PAGE_MONITOR_CONF, apiParams]);
+            // console.log(API_MONITOR_CONF);
+            MIWIFI_MONITOR.log(API_MONITOR_CONF);
+        });
+    }());
+</script>
+
+<script type="tmpl/html" id="tpladdvpn">
+<form action="/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/set_vpn" class="form form-vpnadd" method="post" name="vpn" id="vpn">
+    {if($id && $id !='')}
+        <input type="hidden" name="id" value="{$id}">
+    {/if}
+    <div class="form-item">
+        <label class="k">名称</label>
+        <span class="v"><input type="text" name="oname" reqMsg = "名称" class="ipt-text" value="{$oname}"></span>
+        <em class="t"></em>
+    </div>
+    <div class="form-item-select">
+        <label class="k">协议类型</label>
+        <span class="v">
+            <select name="proto" class="beautify vpntype">
+                <option value="pptp" {if($proto == 'pptp')}selected="selected"{/if}>PPTP</option>
+                
+                <option value="l2tp" {if($proto == 'l2tp')}selected="selected"{/if}>L2TP</option>
+                
+            </select>
+        </span>
+        <em class="t"></em>
+    </div>
+    <div class="form-item">
+        <label class="k">服务器</label>
+        <span class="v"><input type="text" name="server" reqMsg = "服务器" class="ipt-text" value="{$server}"></span>
+        <em class="t"></em>
+    </div>
+    <div class="form-item">
+        <label class="k">用户名</label>
+        <span class="v"><input type="text" name="username" reqMsg = "用户名" class="ipt-text" value="{$username}"></span>
+        <em class="t"></em>
+    </div>
+    <div class="form-item">
+        <label class="k">密码</label>
+        <span class="v"><input type="password" name="password" reqMsg = "密码" class="ipt-text" data-type="password" value="{$password}"></span>
+        <em class="t"></em>
+    </div>
+    <div class="item-contral">
+        <button type="submit" class="btn btn-primary btn-l" id="btnSave"><span>保存</span></button>
+    </div>
+</form>
+
+</script>
+<script type="tmpl/html" id="tplvpnlist">
+{if($vpnlist.length > 0)}
+{for(var i=0; i<$vpnlist.length; i++)}
+<tr id="{$vpnlist[i].id}" class="{if($vpnlist[i].iscurrent == 1)}conn-st-5{else}conn-st-3{/if}">
+    <td>{$vpnlist[i].oname}</td>
+    <td>{$vpnlist[i].proto}</td>
+    <td>{$vpnlist[i].server}</td>
+    <td>{$vpnlist[i].username}</td>
+    <td class="conn-st-text">
+        <span class="vpn-status">
+            <span class="val">
+            {if($vpnlist[i].iscurrent == 1)}
+                查询中...
+            {else}
+                未启用
+            {/if}
+            </span>
+            <span class="uptime"></span>
+        </span>
+    </td>
+    <td>
+        <div class="conn-opt conn-opt-1">
+            <button class="btn btn-primary btn-block btn-conn-stop" data-id={$vpnlist[i].id}><span>断开连接</span></button>
+        </div>
+        <div class="conn-opt conn-opt-2">
+            <button class="btn btn-primary btn-block btn-conn-cancel" data-id={$vpnlist[i].id}><span>取消连接</span></button>
+        </div>
+        <div class="conn-opt conn-opt-3">
+            <button class="l btn btn-dft btn-conn-start" data-id={$vpnlist[i].id}><span>连接</span></button>
+            <button class="l btn btn-dft btn-edit" data-id={$vpnlist[i].id}><span>编辑</span></button>
+            <button class="r btn btn-dft btn-del" data-id={$vpnlist[i].id}><span>删除</span></button>
+        </div>
+        <div class="conn-opt conn-opt-4">
+            <button class="l btn btn-dft btn-conn-start" data-id={$vpnlist[i].id}><span>重连</span></button>
+            <button class="l btn btn-dft btn-edit" data-id={$vpnlist[i].id}><span>编辑</span></button>
+            <button class="r btn btn-dft btn-del" data-id={$vpnlist[i].id}><span>删除</span></button>
+        </div>
+    </td>
+</tr>
+{/for}
+{else}
+<tr>
+    <td colspan="6" class="center">没有设置信息</td>
+</tr>
+{/if}
+
+</script>
+<script type="tmpl/html" id="tmplErrtip">
+<div class="status-err-tips">
+    <span class="arrow"></span>
+    {$cont}
+</div>
+
+</script>
+<script type="tmpl/html" id="tmplsmartvpnurl">
+<tr>
+    <td>{$url}</td>
+    <td><button class="btn btn-dft smartvpn-del" data-url="{$url}"><span>删除</span></button></td>
+</tr>
+
+</script>
+<script type="tmpl/html" id="tmplsmartvpnmac">
+<tr>
+    <td>{$name}</td>
+    <td>{$mac}</td>
+    <td><button class="btn btn-dft smartvpn-del" data-macs="{$mac}"><span>删除</span></button></td>
+</tr>
+
+</script>
+<script type="tmpl/html" id="tmplAddList">
+    <div class="dialog-listadd-form-wrap">
+        <form  class="form" id="listAdd">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>设备名称</th>
+                        <th width="90">状态</th>
+                        <th>MAC地址</th>
+                        <th width="30">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="dialogdeviceslist">
+                    <tr>
+                        <td colspan="4">正在查询中...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-contral">
+                <button type="submit" class="btn btn-primary" id="listAddSubmit"><span>确定</span>
+                </button>
+                <button type="submit" class="btn btn-dft" id="listAddClose"><span>取消</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</script>
+<script type="tmpl/html" id="tmplDevice">
+    <tr>
+        <td>{$name}</td>
+        <td>{$status}</td>
+        <td>{$mac}</td>
+        <td>
+            <input class="deviceinput" type="checkbox" name="nowmac" value="{$mac}" />
+        </td>
+    </tr>
+
+</script>
+<script type="tmpl/html" id="tmplAddmac">
+    <div class="dialog-add-bymac">
+        <form class="form" name="addbymac" id="addbymac">
+            <p>请输入设备的MAC地址</p>
+            <div class="form-item">
+                <label class="k">
+                    MAC地址
+                </label>
+                <span class="v">
+                    <input type="text" id="macaddr" name="addr" class="ipt-text" datatype="macaddr" reqMsg="MAC地址" />
+                </span>
+                <em class="t"></em>
+            </div>
+            <div class="form-contral">
+                <button type="submit" class="btn btn-primary" id="macAddSubmit"><span>确定</span>
+                </button>
+                <button type="submit" class="btn btn-dft" id="macAddClose"><span>取消</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</script>
+<script type="tmpl/html" id="tmplAddurl">
+    <div class="dialog-add-bymac">
+        <form class="form" name="addbyurl" id="addbyurl">
+            <p>请输入地址</p>
+            <div class="form-item">
+                <label class="k">
+                    地址
+                </label>
+                <span class="v">
+                    <input type="text" id="urladdr" name="urladdr" class="ipt-text" reqMsg="地址" />
+                </span>
+                <em class="t"></em>
+            </div>
+            <div class="form-contral">
+                <button type="submit" class="btn btn-primary" id="urlAddSubmit"><span>确定</span>
+                </button>
+                <button type="submit" class="btn btn-dft" id="urlAddClose"><span>取消</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</script>
+<script>
+    var modelVpn = (function () {
+        var timer = null,
+            dlgform,
+            currentId,
+            ajaxdone = true;
+        var vpnConnectStatus = -1;
+
+        function vpnInfo() {
+            var xhr = $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn', {}, function (rsp) {
+                if (rsp.code == 0) {
+                    var tpl = $('#tplvpnlist').html(),
+                        tpldata = [],
+                        list = rsp.list,
+                        current = rsp.current,
+                        iscurrent = 0;
+
+                    currentId = current.id;
+                    $('.section-set').hide();
+
+                    if (list.length > 0) {
+                        for (var i = 0; i < list.length; i++) {
+                            if (list[i].id == current.id) {
+                                iscurrent = 1;
+                                $('.section-set').show();
+                                if (current.auto == '1') {
+                                    $('#autostart')[0].className = 'btn-switch btn-switch-on';
+                                } else {
+                                    $('#autostart')[0].className = 'btn-switch btn-switch-off';
+                                }
+                            } else {
+                                iscurrent = 0;
+                            }
+                            var item = {
+                                id: list[i].id,
+                                proto: list[i].proto.toUpperCase(),
+                                server: list[i].server,
+                                username: StringH.encode4HtmlValue(list[i].username),
+                                oname: StringH.encode4HtmlValue(list[i].oname),
+                                id: list[i].id,
+                                iscurrent: iscurrent
+                            }
+                            tpldata.push(item);
+                        }
+                    }
+                    $('#vpnlist').html(tpl.tmpl({vpnlist: tpldata}));
+                }
+            });
+            return xhr;
+        }
+
+        function vpnStatus() {
+            ajaxdone = false;
+            var xhr = $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn_status', {}, function (rsp) {
+                ajaxdone = true;
+                if (rsp.code == 0) {
+                    var status = rsp.status,
+                        uptime = '',
+                        statusCode = 2,
+                        trstatus,
+                        statusText;
+                    vpnConnectStatus = rsp.status;
+                    // 0 connected 1 connecting 2 failed 3 close
+                    switch (status) {
+                        case 0:
+                            statusText = '已连接';
+                            trstatus = 'conn-st-1';
+                            uptime = secondToDate(rsp.uptime);
+                            break;
+                        case 1:
+                            trstatus = 'conn-st-2';
+                            statusText = '正在拨号...';
+                            break;
+                        case 2:
+                            statusText = '连接失败';
+                            trstatus = 'conn-st-4';
+                            break;
+                        case 3:
+                            statusText = '已断开';
+                            trstatus = 'conn-st-3';
+                            break;
+                        case 4:
+                            statusText = '未启用';
+                            trstatus = 'conn-st-3';
+                            break;
+                        default:
+                            statusText = '连接异常';
+                            trstatus = 'conn-st-4';
+                            break;
+                    }
+
+                    if (rsp.errcode) {
+                        trstatus = 'conn-st-4';
+                        // statusText = rsp.errmsg;
+                        statusText = '<span class="errmsg-wrap" data-error="' + rsp.errmsg + '">连接失败</span>';
+                        uptime = '';
+                    }
+                    ;
+                    var el = document.getElementById(currentId);
+                    if (el) {
+                        el.className = trstatus;
+                        $('.vpn-status .val', el).html(statusText);
+                        $('.vpn-status .uptime', el).html(uptime);
+                    }
+                }
+            });
+            return xhr;
+        };
+
+        function listenStatus() {
+            timer = window.setInterval(function () {
+                if (ajaxdone) {
+                    vpnStatus();
+                }
+            }, 5000);
+        };
+
+        function stopListenStatus() {
+            window.clearInterval(timer);
+        }
+
+        function vpnSwitch() {
+            $('body').delegate('.btn-conn-start', 'click', function (e) {
+                e.preventDefault();
+                var root = $(this).parents('tr'),
+                    id = $(this).attr('data-id');
+                // root[0].className = 'conn-st-2';
+                // root.find('.vpn-status .uptime').html('');
+                // root.find('.vpn-status .val').html('正在拨号...');
+                stopListenStatus();
+                $.pub('loading:start');
+                $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn_switch', {
+                    'conn': 1,
+                    id: id
+                }, function (rsp) {
+                    if (rsp.code == 0) {
+                        currentId = id;
+                        vpnInfo().always(function () {
+                            setTimeout(function () {
+                                vpnStatus().always(function () {
+                                    listenStatus();
+                                    $.pub('loading:stop');
+                                });
+                            }, 4000);
+                        });
+                    } else {
+                        $.pub('loading:stop');
+                        $.alert(rsp.msg);
+                        location.reload(1);
+                    }
+
+                });
+            });
+
+            $('body').delegate('.btn-conn-stop, .btn-conn-cancel', 'click', function (e) {
+                e.preventDefault();
+                var root = $(this).parents('tr'),
+                    id = $(this).attr('data-id');
+                // root[0].className = 'conn-st-5';
+                // root.find('.vpn-status .uptime').html('');
+                // root.find('.vpn-status .val').html('正在断开...');
+                stopListenStatus();
+                $.pub('loading:start');
+                $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn_switch', {
+                    'conn': 0,
+                    id: id
+                }, function (rsp) {
+                    if (rsp.code == 0) {
+                        currentId = id;
+                        setTimeout(function () {
+                            vpnStatus().always(function () {
+                                listenStatus();
+                                $.pub('loading:stop');
+                            });
+                        }, 1000);
+                    } else {
+                        $.pub('loading:stop');
+                        $.alert(rsp.msg);
+                        location.reload(1);
+                    }
+
+                });
+            });
+
+            $('body').delegate('.btn-edit', 'click', function (e) {
+                e.preventDefault();
+                var that = this,
+                    $this = $(that),
+                    id = $this.attr('data-id'),
+                    tpl = $('#tpladdvpn').html(),
+                    tpldata = {
+                        oname: '',
+                        password: '',
+                        server: '',
+                        username: '',
+                        proto: 'pptp'
+                    };
+                $.pub('loading:start');
+                $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn', {}, function (rsp) {
+                    if (rsp.code == 0) {
+                        var list = rsp.list;
+                        if (list.length > 0) {
+                            for (var i = 0; i < list.length; i++) {
+                                if (list[i].id == id) {
+                                    tpldata.proto = list[i].proto;
+                                    tpldata.oname = StringH.encode4HtmlValue(list[i].oname);
+                                    tpldata.password = list[i].password;
+                                    tpldata.server = list[i].server;
+                                    tpldata.username = StringH.encode4HtmlValue(list[i].username);
+                                    tpldata.password = StringH.encode4HtmlValue(list[i].password);
+                                    tpldata.id = list[i].id;
+                                }
+                            }
+                        }
+                        console.log(tpldata);
+                        dlgform = $.dialog({
+                            title: '添加服务',
+                            width: 600,
+                            content: tpl.tmpl(tpldata),
+                            lock: true
+                        });
+                        setTimeout(function () {
+                            $.selectBeautify();
+                            $.formInit();
+                        }, 100);
+                    }
+                    $.pub('loading:stop');
+                });
+            });
+
+            $('body').delegate('.btn-del', 'click', function (e) {
+                e.preventDefault();
+                var that = this,
+                    $this = $(that),
+                    id = $this.attr('data-id'),
+                    ok = function () {
+                        $.pub('loading:start');
+                        $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/del_vpn', {id: id}, function (rsp) {
+                            if (rsp.code == 0) {
+                                location.reload(1);
+                            } else {
+                                $.alert(rsp.msg);
+                            }
+                            $.pub('loading:stop');
+                        });
+                    };
+                $.confirm('你确定要删除此项吗？', ok);
+            });
+
+            $('#autostart').on('click', function (e) {
+                e.preventDefault();
+                var that = this,
+                    $this = $(that),
+                    ison = $this.hasClass('btn-switch-on'),
+                    data = {auto: 1},
+                    classname = 'btn-switch btn-switch-on';
+                if (ison) {
+                    data = {auto: 0};
+                    classname = 'btn-switch btn-switch-off';
+                }
+                $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/set_vpnauto', data, function (rsp) {
+                    that.className = classname;
+                });
+            });
+        }
+
+        function vpnset() {
+            $('#btnadditem').on('click', function (e) {
+                e.preventDefault();
+                var tpl = $('#tpladdvpn').html(),
+                    tpldata = {
+                        oname: '',
+                        password: '',
+                        server: '',
+                        username: '',
+                        proto: 'pptp'
+                    };
+                dlgform = $.dialog({
+                    title: '添加服务',
+                    width: 600,
+                    content: tpl.tmpl(tpldata),
+                    lock: true
+                });
+                setTimeout(function () {
+                    $.selectBeautify();
+                    $.formInit();
+                }, 100);
+            });
+
+            $('body').delegate('#vpn', 'submit', function (e) {
+                e.preventDefault();
+                var url = this.action,
+                    method = this.method,
+                    param = $(this).serialize(),
+                    formName = this.name,
+                    validator = Valid.checkAll(this);
+                if (validator) {
+                    $.pub('wait', {id: '#btnSave'});
+                    $.ajax({
+                        url: url,
+                        type: method,
+                        data: param,
+                        dataType: 'json',
+                        success: function (rsp) {
+                            var msg;
+                            if (rsp.code == 0) {
+                                dlgform.close();
+                                location.reload(1);
+                            } else {
+                                $.alert(rsp.msg);
+                            }
+                            $.pub('done', {id: '#btnSave'});
+                        }
+                    });
+                }
+            });
+
+        }
+
+        function displayHelp(flag) {
+            var arrow = $('#helpArrow');
+            var section = $('#helpSection');
+            if (flag == 'block') {
+                arrow.show();
+                section.show();
+            } else {
+                arrow.hide();
+                section.hide();
+            }
+        }
+
+        function showErrMsg(ele) {
+            var cont = $(ele).attr('data-error');
+            var tpl = $('#tmplErrtip').html();
+            var html = StringH.tmpl(tpl, {
+                cont: cont
+            });
+            $('.status-err-tips').remove();
+            $('body').append(html);
+            $('.status-err-tips').css({
+                left: $(ele).offset().left - $('.status-err-tips').width() / 2 + 20,
+                top: $(ele).offset().top + 28
+            });
+            $('body').click(function (e) {
+                if (!$(e.target).is(".errmsg-wrap")) {
+                    $('.status-err-tips').remove();
+                }
+            });
+        }
+
+        function smartvpnSwitch() {
+            var btn = $('#smartvpnswitch');
+            btn.on('click', function (e) {
+                e.preventDefault();
+                var self = this;
+                var open = $(this).hasClass('btn-switch-on') ? 0 : 1;
+                if (open == 1) {
+                    $.confirm('重新连接vpn后该设置将生效，同时&#34;灵铱服务走vpn功能&#34;将关闭', function () {
+                        checkConnected(function () {
+                            // var enable = $(self).hasClass('btn-switch-on') ? 0 : 1;
+                            var mode = $('#smartvpnmode li.active').attr('data-mode');
+                            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/smartvpn_switch', {
+                                'enable': open,
+                                'mode': mode
+                            }, function (rsp) {
+                                if (rsp.code == 0) {
+                                    getSmartVPNInfo();
+                                    miVPNInfo();
+                                } else {
+                                    $.alert(rsp.msg);
+                                }
+                            });
+                        });
+                    });
+                } else {
+                    checkConnected(function () {
+                        // var enable = $(self).hasClass('btn-switch-on') ? 0 : 1;
+                        var mode = $('#smartvpnmode li.active').attr('data-mode');
+                        $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/smartvpn_switch', {
+                            'enable': open,
+                            'mode': mode
+                        }, function (rsp) {
+                            if (rsp.code == 0) {
+                                getSmartVPNInfo();
+                            } else {
+                                $.alert(rsp.msg);
+                            }
+                        });
+                    });
+                }
+            });
+        }
+
+        function getSmartVPNInfo() {
+            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/smartvpn_info', {}, function (rsp) {
+                if (rsp.code == 0) {
+                    if (rsp.info.switch == 1) {
+                        var tabs = $('#smartvpnmode li');
+                        var desc = $('#smartvpnmodedesc p');
+                        var conts = $('#smartvpnmodecont > div');
+                        $('#smartvpnswitch')[0].className = 'btn-switch btn-switch-on';
+                        $('#smartvpnoff').hide();
+                        $('#smartvpnon').show();
+                        if (rsp.info.mode == 1) {
+                            //按服务地址分流
+                            tabs.removeClass('active').eq(0).addClass('active');
+                            desc.hide().eq(0).show();
+                            conts.hide().eq(0).show();
+                            var list = rsp.info.ulist;
+                            var trarr = [];
+                            var tpl = $('#tmplsmartvpnurl').html();
+                            if ($.isArray(list) && list.length > 0) {
+                                for (var i = 0, len = list.length; i < len; i++) {
+                                    var tr = StringH.tmpl(tpl, {
+                                        url: list[i]
+                                    });
+                                    trarr.push(tr);
+                                }
+                                $('#smartvpnurlTbody').html(trarr.join(''));
+                            } else {
+                                $('#smartvpnurlTbody').html('<tr><td colspan="2" style="text-align:center;">还未添加服务地址</td></tr>');
+                            }
+                        } else {
+                            tabs.removeClass('active').eq(1).addClass('active');
+                            desc.hide().eq(1).show();
+                            conts.hide().eq(1).show();
+                            var mlist = rsp.info.mlist;
+                            var mnamelist = rsp.info.name;
+                            var mtrarr = [];
+                            var mtpl = $('#tmplsmartvpnmac').html();
+                            if ($.isArray(mlist) && mlist.length > 0) {
+                                for (var j = 0, l = mlist.length; j < l; j++) {
+                                    var mtr = StringH.tmpl(mtpl, {
+                                        mac: mlist[j],
+                                        name: mnamelist[mlist[j]]
+                                    });
+                                    mtrarr.push(mtr);
+                                }
+                                $('#smartvpnmacTbody').html(mtrarr.join(''));
+                            } else {
+                                $('#smartvpnmacTbody').html('<tr><td colspan="3" style="text-align:center;">还未添加设备</td></tr>');
+                            }
+                        }
+                    } else {
+                        $('#smartvpnswitch')[0].className = 'btn-switch btn-switch-off';
+                        $('#smartvpnoff').show();
+                        $('#smartvpnon').hide();
+                    }
+                } else {
+                    $.alert(rsp.msg);
+                }
+            });
+        }
+
+        function addSmartvpnByDeviceList() {
+            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/devicelist', {}, function (rsp) {
+                if (rsp.code == 0) {
+                    var list = rsp.list;
+                    var trarr = [];
+                    var tpl = $('#tmplDevice').html();
+                    if ($.isArray(list) && list.length > 0) {
+                        for (var i = 0, len = list.length; i < len; i++) {
+                            var tr = StringH.tmpl(tpl, {
+                                name: list[i].name,
+                                status: list[i].online == 1 ? '在线' : '离线',
+                                mac: list[i].mac
+                            });
+                            trarr.push(tr);
+                        }
+                        $('#dialogdeviceslist').html(trarr.join(''));
+                        $('#listAddClose').on('click', function (e) {
+                            e.preventDefault();
+                            devicelistDialog.close();
+                        });
+                        $('#listAddSubmit').on('click', function (e) {
+                            e.preventDefault();
+                            var inputs = $('.deviceinput:checked');
+                            var valarr = [];
+                            if (inputs.length < 1) {
+                                alert("请至少选择一个设备");
+                            } else {
+                                inputs.each(function (index, item) {
+                                    valarr.push($.trim(item.value));
+                                });
+                                mac = valarr.join(',');
+                                devicelistDialog.close();
+                                setSmartVPNMac(mac, 0);
+                            }
+                        });
+                    } else {
+                        $('#dialogdeviceslist').html('<tr><td colspan="4" style="text-align:center;">还没有设备连接进来</td></tr>');
+                    }
+                }
+            });
+        }
+
+        function addSmartvpnByMac() {
+            $('#macAddClose').on('click', function (e) {
+                e.preventDefault();
+                addSmartVPNmacDialog.close();
+            });
+            $('#macAddSubmit').on('click', function (e) {
+                e.preventDefault();
+                var validator = Valid.checkAll($('#addbymac')[0]);
+                if (validator) {
+                    var mac = $.trim($('#macaddr').val());
+                    addSmartVPNmacDialog.close();
+                    setSmartVPNMac(mac, 0);
+                }
+            });
+        }
+
+        function setSmartVPNMac(macs, opt) {
+            checkConnected(function () {
+                $.ajax({
+                    url: '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/smartvpn_mac',
+                    type: 'POST',
+                    data: {'macs': macs, 'opt': opt},
+                    dataType: 'json',
+                    success: function (rsp) {
+                        if (rsp.code == 0) {
+                            getSmartVPNInfo();
+                        } else {
+                            $.alert(rsp.msg);
+                        }
+                    }
+                });
+            });
+        }
+
+        function setSmartVPNUrl(url, opt) {
+            $.ajax({
+                url: '/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/smartvpn_url',
+                type: 'POST',
+                data: {'url': url, 'opt': opt},
+                dataType: 'json',
+                success: function (rsp) {
+                    if (rsp.code == 0) {
+                        getSmartVPNInfo();
+                    } else {
+                        $.alert(rsp.msg);
+                    }
+                }
+            });
+        }
+
+        function addSmartvpnByUrl() {
+            $('#urlAddClose').on('click', function (e) {
+                e.preventDefault();
+                addSmartVPNurlDialog.close();
+            });
+            $('#urlAddSubmit').on('click', function (e) {
+                e.preventDefault();
+                var validator = Valid.checkAll($('#addbyurl')[0]);
+                if (validator) {
+                    var url = $.trim($('#urladdr').val());
+                    addSmartVPNurlDialog.close();
+                    checkConnected(function () {
+                        setSmartVPNUrl(url, 0);
+                    });
+                }
+            });
+        }
+
+        function delSmartVPN(ele) {
+            var mode = $('#smartvpnmode li.active').attr('data-mode');
+            var para = '';
+            if (mode == 1) {
+                para = $(ele).attr('data-url');
+                setSmartVPNUrl(para, 1);
+            } else {
+                para = $(ele).attr('data-macs');
+                setSmartVPNMac(para, 1);
+            }
+        }
+
+        function miVPNInfo() {
+            $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/mi_vpn_info', {}, function (rsp) {
+                if (rsp.code == 0) {
+                    if (rsp.status == 1) {
+                        $('#mivpnswitch')[0].className = 'btn-switch btn-switch-on';
+                    } else {
+                        $('#mivpnswitch')[0].className = 'btn-switch btn-switch-off';
+                    }
+                } else {
+                    $.alert(rsp.msg);
+                }
+            });
+        }
+
+        function miVPNSwitch() {
+            var btn = $('#mivpnswitch');
+            btn.on('click', function (e) {
+                e.preventDefault();
+                var open = $(this).hasClass('btn-switch-on') ? 0 : 1;
+                if (open == 1) {
+                    $.confirm('开启该功能后，需要您重新连接VPN方可生效，且智能分流功能将关闭。若开启后发现路由器App远程访问出现异常，请您关闭。是否确认开启？', function () {
+                        stopListenStatus();
+                        $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn_switch', {
+                            'conn': 0,
+                            id: currentId
+                        }, function (rsp) {
+                            if (rsp.code == 0) {
+                                // nextfn && nextfn();
+                                $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/mi_vpn', {'open': open}, function (rsp) {
+                                    if (rsp.code == 0) {
+                                        miVPNInfo();
+                                        //close smart vpn ui
+                                        $('#smartvpnswitch')[0].className = 'btn-switch btn-switch-off';
+                                        $('#smartvpnoff').show();
+                                        $('#smartvpnon').hide();
+                                    } else {
+                                        $.alert(rsp.msg);
+                                    }
+                                });
+                                listenStatus();
+                            } else {
+                                $.alert(rsp.msg);
+                            }
+                        });
+                    });
+                } else {
+                    $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/mi_vpn', {'open': open}, function (rsp) {
+                        if (rsp.code == 0) {
+                            miVPNInfo();
+                        } else {
+                            $.alert(rsp.msg);
+                        }
+                    });
+                }
+            });
+        }
+
+        function addEvent() {
+            $('.help .ico').on('click', function () {
+                displayHelp('block');
+            });
+            $('.help-close').on('click', function () {
+                displayHelp('none');
+            });
+            $('body').delegate('#vpnlist .errmsg-wrap', 'click', function () {
+                showErrMsg(this)
+            });
+            $('#smartvpnmode li').on('click', function (e) {
+                var checked = $(this).hasClass('active');
+                var mode = $(this).attr('data-mode');
+                if (!checked) {
+                    checkConnected(function () {
+                        $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/misystem/smartvpn_switch', {
+                            'enable': 1,
+                            'mode': mode
+                        }, function (rsp) {
+                            if (rsp.code === 0) {
+                                getSmartVPNInfo();
+                            } else {
+                                $.alert(rsp.msg);
+                            }
+                        });
+                    });
+                }
+            });
+            $('#addsmartvpndevicelist').on('click', function () {
+                devicelistDialog = $.dialog({
+                    title: '请选择需要使用VPN的设备',
+                    content: $('#tmplAddList').html(),
+                    lock: true,
+                    width: 600,
+                    initialize: function () {
+                        addSmartvpnByDeviceList();
+                    }
+                });
+            });
+            $('#addsmartvpnmac').on('click', function () {
+                addSmartVPNmacDialog = $.dialog({
+                    title: '通过MAC地址添加要使用VPN的设备',
+                    content: $('#tmplAddmac').html(),
+                    lock: true,
+                    width: 390,
+                    initialize: function () {
+                        addSmartvpnByMac();
+                    }
+                });
+            });
+            $('#addsmartvpnurl').on('click', function () {
+                addSmartVPNurlDialog = $.dialog({
+                    title: '添加要使用VPN的服务地址',
+                    content: $('#tmplAddurl').html(),
+                    lock: true,
+                    width: 390,
+                    initialize: function () {
+                        addSmartvpnByUrl();
+                    }
+                });
+            });
+            $('body').delegate('.smartvpn-del', 'click', function () {
+                var self = this;
+                checkConnected(function () {
+                    delSmartVPN(self);
+                });
+            });
+        }
+
+        function checkConnected(nextfn) {
+            if (vpnConnectStatus == 0) {
+                $.confirm('当前正在连接的VPN将被断开，重新连接后该设置将生效。', function () {
+                    stopListenStatus();
+                    $.getJSON('/cgi-bin/luci/;stok=dcf85a2b330924ffcfef708e4fdfb554/api/xqsystem/vpn_switch', {
+                        'conn': 0,
+                        id: currentId
+                    }, function (rsp) {
+                        if (rsp.code == 0) {
+                            nextfn && nextfn();
+                            listenStatus();
+                        } else {
+                            $.alert(rsp.msg);
+                        }
+                    });
+                });
+            } else {
+                nextfn && nextfn();
+            }
+        }
+
+        return {
+            init: function () {
+                vpnInfo();
+                vpnset();
+                vpnSwitch();
+                listenStatus();
+                getSmartVPNInfo();
+                smartvpnSwitch();
+                miVPNInfo();
+                miVPNSwitch();
+                addEvent();
+            }
+        }
+    }());
+    $(function () {
+        modelVpn.init();
+        getfoot()
+    });
+
+    function getfoot() {
+        $.post("/cgi-bin/status.lua", {getcfg: 1}, function (response, status, xhr) {
+            if (response.code === 0) {
+                document.getElementById('ft').innerHTML = template('ft_template', {
+                    data: response
+                });
+            }
+        }, "json");
+    }
+</script>
+</body>
+</html>
